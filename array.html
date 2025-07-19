@@ -19,6 +19,14 @@
     console.log(colors)
     colors.pop()
     console.log(colors)
+
+    let colors2 = ["green", "yellow", "purple", "blue"];
+    console.log(colors2)
+    let index = parseInt(prompt("Enter index 0-3 to remove:"));
+    if (index >=0 && index < colors2.length) {
+        colors2.splice(index, 1)
+        console.log(colors2)
+    }
     </script>
 </body>
 </html>
