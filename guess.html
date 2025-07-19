@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> 
+</head>
+<style>
+
+</style>
+<body style="text-align: center">
+<button class="btn text-white bg-dark" style="display: block; margin: auto; position: relative; top: 432px;" onclick="">button</button>
+    <script>
+    let randomNum = Math.floor(Math.random() * 10) + 1;
+
+    for (let i = 0; i < 4; i++) {
+    let userGuess = parseInt(prompt("Guess a number 1-10:    attempts: " + i + " max attempts is 4!"));
+
+    if(userGuess == randomNum) {
+        alert("You won!")
+        break
+    }
+    else{
+        alert('Try again!')
+    }
+    if (randomNum > userGuess) {
+        alert("Too low!")
+    }
+    else {
+        alert("Too high!")
+    }
+     }
+    </script>
+</body>
+</html>
