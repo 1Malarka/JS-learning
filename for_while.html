@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> 
+</head>
+<style>
+
+</style>
+<body style="text-align: center">
+<button class="btn text-white bg-dark" style="display: block; margin: auto; position: relative; top: 432px;" onclick="">button</button>
+    <script>
+    let colors2 = ["green", "yellow", "green", "blue"];
+    console.log(colors2);
+    while ((index = colors2.indexOf("green")) !== -1) {
+        colors2.splice(index, 1);
+        console.log(colors2);
+    }
+
+    let numbers = [1, 2, 3, 4, 5];
+    for (let i = 0; i < numbers.length; i++) {        
+        console.log(numbers[i] * 2);
+    }
+
+    let numbers2 = [1, 2, 3, 4, 5, 6];
+    let sum = 0;
+    for (let i = 0; i < numbers2.length; i++) {
+        sum += numbers2[i];
+    }
+    console.log(sum)    
+
+    let numbers3 = [20, 10, 1 , 66, 8, 2];
+    let largest = numbers3[0];
+    let smallest = numbers3[0];
+    let count10 = 0;
+
+    for (let i = 0; i < numbers3.length; i++) {
+        if (numbers3[i] > largest) {
+            largest = numbers3[i];
+        }
+        if (numbers3[i] < smallest) {
+            smallest = numbers3[i];
+        }
+        if (numbers3[i] > 10) {
+            count10++;
+        }
+        sum += numbers3[i]
+        
+    }
+
+    console.log("Largest: " + largest);
+    console.log("Smallest: " + smallest);
+    console.log("Numbers more than 10 in array: " + count10 + " numbers");
+    let average = sum / numbers3.length;
+    console.log("Average in array: " + average.toFixed(1));
+    </script>
+</body>
+</html>
