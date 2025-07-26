@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> 
+</head>
+<style>
+
+</style>
+<body style="text-align: center">
+<button class="btn text-white bg-dark" style="display: block; margin: auto; position: relative; top: 432px;" onclick="">button</button>
+    <script>
+function multiply(arr, times = 1) {
+    if (typeof arr !== "object" || !Array.isArray(arr)) { 
+        console.log("First argument must be an array"); 
+        return;
+    }
+    if (typeof times !== "number" || times < 0) {
+        console.log("Times must be a positive number.")
+        return;
+    }
+
+    let hasNonNumber = false;
+    let result = 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] !== "number") {
+            hasNonNumber = true;
+    }   else {
+            result *= arr[i];
+        }
+
+    }
+
+    if (hasNonNumber) {
+        console.log("Array contains non-number value.")
+        return "Invalid value";
+    }
+
+   return result * times;
+   
+}
+
+console.log(multiply([3, 5]));
+console.log(multiply([3, 5], 2));
+console.log(multiply([3, 5], -1));
+console.log(multiply("not an array", 5));
+console.log(multiply([3, "a"]));
+console.log(multiply({ x: 5 }, 2));
+
+
+    </script>
+</body>
+</html>
